@@ -1,0 +1,244 @@
+/*
+  The whole page
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../css/image.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: scroll;
+}
+
+main{
+    width: 500px;
+    margin: 0 auto;
+    min-height: calc(100vh - 60px - 80px);
+    background-color: rgba(255,255,255, 0.5);
+    border-radius: 20px;
+}
+
+/*
+  The main-div div
+*/
+.main-div{
+  position: relative;
+  height: auto;
+
+}
+
+/*
+  The infoDiv1 div while not hovering
+*/
+.infoDiv1{
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/*
+  The infoDiv1 div while not hovering (affecting the infoDiv2)
+*/
+.infoDiv1 + .infoDiv2{
+  animation-name: fadeOut;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/*
+  The infoDiv1 div while hovering (affecting the infoDiv2)
+*/
+.infoDiv1:hover + .infoDiv2{
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/*
+  The infoDiv1 div while hovering
+*/
+.infoDiv1:hover{
+  animation-name: fadeOut;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/*
+  The infoDiv2 div while not hovering
+*/
+.infoDiv2{
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+/*
+  The infoDiv2 div while hovering
+*/
+.infoDiv2:hover{
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+/*
+  Keyframes for the info fade out animation
+*/
+@keyframes fadeOut{
+  from{ opacity: 1}
+  to{ opacity: 0}
+}
+
+/*
+  Keyframes for the info fade in animation
+*/
+@keyframes fadeIn{
+  from{ opacity: 0}
+  to{ opacity: 1}
+}
+
+/*
+  The main-title div
+*/
+.main-title{
+  text-align: center;
+  padding-top: 10%;
+}
+
+/*
+  Page title
+*/
+.main-title h1{
+  font-size: 70px;
+  font-family: monospace;
+  font-weight: 900;
+  color: black;
+}
+
+/*
+  The main-text div
+*/
+.main-text{
+  margin-top: 10%;
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+/*
+  All paragraphs in the main-div div
+*/
+.main-text p{
+  font-size: 30px;
+  font-family: monospace;
+  font-weight: 200;
+  color: black;
+}
+
+/*
+  Page sub title
+*/
+.main-title h6{
+  font-size: 15px;
+  font-family: monospace;
+  font-style: italic;
+  font-weight: 200;
+}
+
+/*
+  The whole header section
+*/
+.header-section{
+  background-color: #4b4b4b;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  width: 100%;
+  height: 60px;
+}
+
+/*
+  Other list elements div in the header section
+*/
+.pageButtons{
+  height: auto;
+}
+
+/*
+  Header list elements div
+*/
+.pButtons{
+  text-align: center;
+}
+
+/*
+  Header list elements while not hovering
+*/
+.pButtons li{
+  display: inline-block;
+  margin: 5px 2px 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 100;
+  font-size: 25px;
+  transition: padding .5s;
+}
+
+/*
+  All links on the page
+*/
+a{
+  color: white;
+  text-decoration: none;
+}
+
+/*
+  Header list elements while hovering
+*/
+.pButtons li:hover{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*
+  The whole footer section
+*/
+.footer-section{
+  background-color: #4b4b4b;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  height: 80px;
+}
+
+/*
+  The basic information in the footer section
+*/
+.basicInfo{
+  font-size: 15px;
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+/*
+  The created by text
+*/
+.createdBy{
+  font-size: 10px;
+  font-weight: 100;
+  padding: 10px;
+}

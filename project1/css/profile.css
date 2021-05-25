@@ -1,0 +1,87 @@
+/* The whole page */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../css/image.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: scroll;
+}
+
+main{
+    width: 500px;
+    margin: 0 auto;
+    min-height: calc(100vh - 80px - 60px);
+
+}
+
+/* The header section from the header.php file */
+.header-section{
+  background-color: #4b4b4b;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  width: 100%;
+  height: 60px;
+}
+
+/* The page link buttons on top of the page */
+.pageButtons{
+  height: auto;
+}
+
+
+.pButtons{
+  text-align: center;
+}
+
+/* The list elements of the page buttons */
+.pButtons li{
+  display: inline-block;
+  margin: 5px 2px 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 100;
+  font-size: 25px;
+  transition: padding .5s;
+}
+
+/* All the links */
+a{
+  color: white;
+  text-decoration: none;
+}
+
+/* The list elements of the page buttons while hovering with the cursor*/
+.pButtons li:hover{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* The footer section from the footer.php file */
+.footer-section{
+  background-color: #4b4b4b;
+  text-align: center;
+  color: white;
+  font-family: monospace;
+  height: 80px;
+}
+
+/* The information in the footer section */
+.basicInfo{
+  font-size: 15px;
+  font-weight: 100;
+  padding-top: 5px;
+}
+
+/* The created by information in the footer section */
+.createdBy{
+  font-size: 10px;
+  font-weight: 100;
+  padding: 10px;
+}
